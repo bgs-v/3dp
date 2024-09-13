@@ -1,8 +1,8 @@
 //author: brandon sharp
 //date: 2024 august 28
 //purpose: bed leveling 3d ender pro
-h = .1;
-sqw = .1;
+h = .75;
+sqw = .50;
 w = 140;
 //i = 2;
 for ( i = [10 : 20 : w]) {
