@@ -38,3 +38,5 @@ module final() {
         //TODO:
     }
 }
+
+final();
