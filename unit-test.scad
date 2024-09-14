@@ -1,7 +1,3 @@
-//diameter: .76in 19.4mm
-//wall diam: 1.2mm
-//prong width 4.7mm
-
 //date: 2024 september 13
 //purpose: confirm units of printed versions of openscad -> stl models
 h = 5;
