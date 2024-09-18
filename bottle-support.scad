@@ -31,7 +31,7 @@ module prong() {
 }
 
 module curvedTop() {
-    //TODO:
+    //TODO: can probably approximate with an arc of a very large circle
 }
 
 
