@@ -8,10 +8,11 @@
 //cylinder with cutout
 //curved 'finger' to hold bottles
 //prongs on the bottom to snap into the warmer
-$fn=200;
+$fn=32; //200 when done
 cylheight = 51.7;
 cyldiam = 19.6;
 wallwidth = 1.2;
+prong_height_offset = 7;
 //cylinder(r = cyldiam, h = cylheight)
 module mainCylinder()
 {
@@ -22,9 +23,11 @@ module mainCylinder()
     };
 }
 
-//mirror/rotate this to either side
 module prong() {
-    //TODO:
+    translate([-1, cyldiam - wallwidth - .5, -prong_height_offset]) 
+        cube([2, 1, cylheight + prong_height_offset]);
+    //TODO: add notch
+    
 }
 
 module curvedTop() {
@@ -34,8 +37,10 @@ module curvedTop() {
 
 module final() {
     union() {
+        curvedTop();
         mainCylinder();
-        //TODO:
+        prong();
+        mirror([0, -1, 0]) prong();
     }
 }
 
