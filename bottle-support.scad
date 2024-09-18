@@ -23,10 +23,18 @@ module mainCylinder()
     };
 }
 
+module notch() {
+    scale([1, 1, 2])
+    linear_extrude(1)
+    polygon([[0,0],[0,1],[1,1]]);
+}
+
 module prong() {
-    translate([-1, cyldiam - wallwidth - .5, -prong_height_offset]) 
+    translate([-1, cyldiam - wallwidth - .5, -prong_height_offset]) {
         cube([2, 1, cylheight + prong_height_offset]);
-    //TODO: add notch
+        translate([0, 1.0, 0])
+        rotate([90, 0, 90]) notch();
+    }
     
 }
 
@@ -37,6 +45,7 @@ module curvedTop() {
 
 module final() {
     union() {
+        
         curvedTop();
         mainCylinder();
         prong();
