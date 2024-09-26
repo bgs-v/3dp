@@ -8,7 +8,7 @@
 //cylinder with cutout
 //curved 'finger' to hold bottles
 //prongs on the bottom to snap into the warmer
-$fn=32; //200 when done
+$fn = 200; //200 when done
 cylheight = 51.7 / 10;
 cyldiam = 19.6;
 cylrad = cyldiam / 2; // oops. yes I did print this out using diameter as radius. as I said: oops.
